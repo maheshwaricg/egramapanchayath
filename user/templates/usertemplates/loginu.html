@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="{% static 'js/javascript.js' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <nav class="nav-1">
+    <div class="nav-bar">
+      <div class="nav-img">
+        <img src="{% static 'images/logo.jpg' %}" alt="" width="50px">
+      </div>
+      <div class="navi-list">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Login</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href=""> <button class="btn-1">Feedback</button></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Login form -->
+  <div class="myform">
+    <div class="container-3">
+      <div class="forms">
+        <div class="form login">
+          <span class="title"> User Login</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input type="text" id="_email" placeholder="Enter your email" required>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" id="_password" class="password" placeholder="Enter your password" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="logCheck">
+                <label for="logCheck" class="text">Remember me</label>
+              </div>
+
+              <a href="#" class="text">Forgot password?</a>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Login" onclick="return login()">
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">Not a member?
+              <a href="#" class="text signup-link">Signup Now</a>
+            </span>
+          </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="form signup">
+          <span class="title">Registration</span>
+
+          <form action="#">
+            <div class="input-field">
+              <input type="text" placeholder="Enter your name" required>
+              <i class="uil uil-user"></i>
+            </div>
+            <div class="input-field">
+              <input type="text" placeholder="Enter your email" required>
+              <i class="uil uil-envelope icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Create a password" required>
+              <i class="uil uil-lock icon"></i>
+            </div>
+            <div class="input-field">
+              <input type="password" class="password" placeholder="Confirm a password" required>
+              <i class="uil uil-lock icon"></i>
+              <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+
+            <div class="checkbox-text">
+              <div class="checkbox-content">
+                <input type="checkbox" id="termCon">
+                <label for="termCon" class="text">I accepted all terms and conditions</label>
+              </div>
+            </div>
+
+            <div class="input-field button">
+              <input type="button" value="Signup">
+            </div>
+          </form>
+
+          <div class="login-signup">
+            <span class="text">Already a member?
+              <a href="#" class="text login-link">Login Now</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--<script src="script.js"></script>-->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Login</header>
+      <form action="#">
+        <input type="text" id="e_mail" placeholder="Enter your email">
+        <label for="" id="errormail"></label>
+        <input type="password" id="_password" placeholder="Enter your password">
+        <label for="" id="pass_word"></label>
+        <a href="#">Forgot password?</a>
+        <input type="button" class="button" value="Login">
+        <button type="submit" onclick="return _loginform()"><a href="Signin"></a> </button>
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?
+          <label for="check">Signup</label>
+        </span> -->
+  <!-- </div>
+    </div> -->
+  <!-- <div class="registration form">
+      <header>Signup</header>
+      <form action="#">
+        <input type="text" id="email_error" placeholder="Enter your email"> -->
+  <!-- <label for="" id="error_email"></label> -->
+  <!-- <input type="password" id="password_error" placeholder="Create a password"> -->
+  <!-- <label for="" id="error_password"></label> -->
+  <!-- <input type="password" id="confirm_error" placeholder="Confirm your password">
+        <label for="" id="_errorpassword1"></label>
+        <input type="button" class="button" value="Signup">
+
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?
+          <label for="check">Login</label>
+        </span>
+      </div>
+    </div>
+  </div> -->
+  <script>
+    function login() {
+      var email = document.getElementById('_email').value;
+      var password = document.getElementById('_password').value;
+      status = 0;
+      if (email == "") {
+        alert("Email cannot be blank");
+
+      }
+      else if (password == "") {
+        alert("Password cannot be blank");
+      }
+      else {
+        status = 1;
+      }
+      if (status == 1) {
+        return true;
+        alert("You are logged in");
+      }
+      else {
+        return false;
+      }
+
+    }
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
